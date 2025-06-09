@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forms | Input Tags</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 align="middle">Taking Inputs From the Keyboard</h1>
+    <from action="" method="post">
+        <div align="middle">
+            <label for="username" autofocus>Enter the Username :</label>
+            <input type="text" id="username" name ="username" placeholder="Enter Username">
+        </div>
+        <br>
+        <div align="middle">
+            <label for="password">Enter the Password : </label>
+            <input type ="password" name ="password" id="password" placeholder="Enter your password">
+        </div>
+        <br>
+        <div align="middle">
+            <label>Gender : </label>
+            <input type ="radio" name ="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type ="radio" name ="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </div>
+        <br>
+        <div align="middle">
+            <input type="checkbox" id="checkbox" name="checkbox" value="checkbox">
+            <label for="checkbox">Started the Web Development</label>
+        </div>
+        <br>
+        <div align="middle">
+            <label >Select The Fruits form the Following : </label>
+            <select name="fruits">
+                <option name="default" value="default">---Default---</option>
+                <option name="apple">Apple</option>
+                <option name="grapes">Grapes</option>
+                <option name="banana">Banana</option>
+            </select>
+        </div>
+        <br>
+        <div align="middle">
+            <p>Give Suggestions for the Created Website : </p>
+            <textarea name="comment" rows="5" cols="50"></textarea>
+        </div>
+        <br>
+        <div align="middle">
+
+            <input type="submit" id="submit" value="Submit">
+            <input type="reset"id="reset" value="Reset">
+        </div>
+    </from>
+    
+</body>
+</html>
