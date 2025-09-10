@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Edu+NSW+ACT+Hand+Pre:wght@400..700&family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-family: "Poppins", sans-serif;
+}
+.left
+{
+    width: 25vw;
+}
+.right
+{
+    width: 75vw;
+    position: relative;
+}
+.p-1
+{
+    padding: 13px;
+}
+.home ul{
+    list-style: none;
+
+}
+.home> div img{
+    width: 25px;
+}
+.home ul li 
+{
+    gap: 10px;
+    width: 16px;
+}
+.home ul li:hover{
+    text-decoration: underline;
+}
+.smallGreyBlock
+{
+    background-color: #1f1f1f;
+}
+.library
+{
+    position: relative;
+    min-height: 72vh;
+}
+.whiteBtn
+{
+    border: none;
+    padding: 8px;
+    font-size: 12px;
+    border-radius: 16px;
+    font-weight: 600
+}
+.info :nth-child(1){
+    word-break: break-all;
+}
+.songList
+{
+    height: 325px;
+    overflow-y: scroll;
+}
+.hamburger
+{
+    display: none;
+}
+.songList ul 
+{
+    list-style-type:none;
+    margin-top: 13px;
+    
+}
+.close
+{
+    display: none;
+    cursor: pointer;
+}
+.whiteBtn:hover
+{
+   background-color: darkgrey;
+   cursor: pointer;
+}
+.spotifyPlaylist
+{
+    position: relative;
+}
+.spotifyPlaylist h4{
+    font-weight: 600;
+}
+.signUp
+{
+    border: none;
+    padding: 5px; 
+    background-color: #121212; 
+    color: grey; font-weight: 500; 
+    font-size: 14px;
+}
+.signUp:hover{
+    color: whitesmoke;
+    cursor: pointer;
+}
+.player
+{
+    position: fixed;
+    bottom: 12px;
+    background-color: #121212;
+    border-radius: 12px;
+    width: 71%;
+    padding: 8px;
+    gap: 10px;
+}
+.playbtn img
+{
+    width: 30px;
+}
+
+.volumeControl {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.volumeControl img
+{
+    width: 20px;
+}
+.volume-slider {
+    position: absolute;
+    bottom: 70px; /* space above icon */
+    left: 50%;
+    transform: translateX(-50%) rotate(-90deg);
+    width: 100px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.volumeControl:hover .volume-slider {
+    opacity: 1;
+}
+.seekbar
+{
+    position: relative;
+    width: 99%;
+    border: 1.5px solid white;
+    border-radius: 5px;
+    /* padding: 1px; */
+    margin: 10px 0 3px 0;
+    cursor: pointer;
+}
+.circle
+{
+    position: absolute;
+    top: 82.5%;
+    transform: translate(-50%, -50%);
+    width: 12px; /* or your actual size */
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+}
+.aboveBar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.aboveBar>div
+{
+    font-size: 13px;
+    color: white;
+}
+
+@media only screen and (max-width : 1050px)
+{
+    .left
+    {
+        background-color: black;
+        position : absolute;
+        left: -120%;
+        transition: all 1s ease-in-out;
+        z-index: 1;
+        width: 350px;
+    }
+    .right{
+        width : 100vw;
+        margin: 0;
+    }
+    .player
+    {
+        /* Abhi Hua with the help of this  */
+
+        width: calc(100vw - 70px); 
+        margin: 10px;
+    }
+    .hamburger
+    {
+        display: inline-block;
+        width: 33px;
+        cursor: pointer;
+    }
+    .songInfo
+    {
+        font-size:10px ;
+    }
+    .songTime
+    {
+        font-size: 10px;
+        width: 50px;
+    }
+    .playbtn
+    {
+        padding-left: 50px;
+    }
+    .playbtn img
+    {
+        width:20px ;
+    }
+    .close
+    {
+        display: inline-block;
+    }
+}
+@media only screen and (max-width:455px){
+    .playbtn
+    {
+        padding-left: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+    }
+    .songInfo {
+        font-size: 8px;
+        font-weight: 500;
+        flex: 1;
+        text-align: left;
+    }
+    
+    .songTime {
+        flex: 1;
+        text-align: right;
+    }
+    
+    .player .aboveBar {
+        position: relative;
+        padding-top: 10px; /* Give space for the centered play button */
+    }
+    .content
+    {
+        grid-template-columns: 1fr 1fr;
+    }
+}

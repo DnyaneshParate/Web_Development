@@ -1,0 +1,261 @@
+.border
+{
+    border: 2px solid rgb(168, 16, 16);
+    margin : 3px;
+}
+.container
+{
+    min-height: 100vh;
+}
+.flex
+{
+    display: flex;
+}
+.justify-content
+{
+    justify-content: center;
+}
+.items-content
+{
+    align-items: center;
+}
+.invert
+{
+    filter: invert(1);
+}
+.bg-black
+{
+    background-color: black;
+    color: white;
+}
+.rounded
+{
+    border-radius: 8px;
+}
+.leftMargin
+{
+    margin: 6px;
+}
+.bg-grey
+{
+    background-color: #121212;
+    color: white;
+}
+.homeMargin
+{
+    margin-bottom: 10px;
+}
+.footer
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    position: absolute;
+    bottom: 0px;
+}
+.col
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer a
+{
+    
+    font-size: 10px;
+    /* color :#1f1f1f; */
+    text-decoration: none;
+    color: grey;
+}
+.back img
+{
+   background-color: white;
+   margin-left: 5px;
+   position: relative;
+   top: 2.5px;
+   width: 12px;
+   padding: 6px;
+   /* fill:"#000000"; */
+   color: grey;
+    border: none;
+    border-radius: 100%;
+}
+.rightMargin
+{
+    margin-bottom: 8px;
+}
+.rightImg
+{
+    width: 130px;
+}
+.rightImg img
+{
+    width:100%;
+    border: none;
+    object-fit: contain;
+    /* padding: 5px; */
+    margin-top: 15px;
+    border-radius: 6px;
+}
+.card{
+    width: 130px;
+    padding: 0px 10px 10px 10px;
+    position: relative;
+    transition: all 1.5s;
+}
+.card:hover
+{
+    background-color: rgba(245, 245, 245, 0.2);
+    cursor: pointer;
+}
+.title
+{
+    font-size: 12px;
+    font-weight: 500;
+}
+ span a{
+    color: grey;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 10px;
+}
+/* span a :hover{
+    text-decoration: underline;
+} */
+.data
+{
+    background-image: linear-gradient(to bottom, #434343 0%, #000000 100%);
+    /* max-height: 89vh; */
+}
+.play
+{
+    position: absolute;
+    right: 17px;
+    top: 130px;
+    opacity: 0;
+    transition: all 0.4s ease-out;
+}
+.content
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 81vh;
+}
+.card:hover .play
+{
+    opacity: 1;
+    top: 90px;
+}
+::-webkit-scrollbar
+{
+    width: 12px;
+}
+::-webkit-scrollbar-track
+{
+    background:#1a1a1a ;
+}
+::-webkit-scrollbar-thumb
+{
+    background: #000000;
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #111111;
+}
+*{
+    scrollbar-width: thin;
+    scrollbar-color: #000000 #1a1a1a;
+}
+.song
+{
+    border: 1px solid rgba(245, 245, 245, 0.511);
+    border-radius: 5px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    
+}
+
+.songGap
+{
+    gap: 10px;
+}
+.playNow
+{
+    gap: 8px;
+}
+.playNow div
+{
+    font-size: 7.5px;
+    font-weight:600;
+}
+.playNow img
+{
+    width: 22px;
+}
+.player .songInfo {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    /* width: 110px; */
+    /* width-full; */
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.songInfo{
+    flex:4;
+}
+
+.player{
+    flex:5;
+
+}
+
+.playbtn{
+    flex:4;
+}
+
+.songTime{
+    width:100px;
+}
+
+/* Only added by JS if needed */
+.player .songInfo.animate-scroll {
+    animation: scrollText 8s linear infinite;
+    animation-delay: 1s;
+}
+
+/* Translate-based keyframes (better than left) */
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    80% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.songName
+{
+    font-size: 11px;
+}
+.artist
+{
+    font-size: 8px;
+    color: grey;
+}
+.playbtn
+{
+    cursor: pointer;
+}
